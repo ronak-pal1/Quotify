@@ -13,7 +13,6 @@ function getQuote()
 fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
 	.then(response => response.json())
 	.then(response => {
-        console.log(response);
         document.getElementById("quoteField").innerHTML=response.content;
         document.getElementById("authorField").innerHTML="- "+response.originator.name;
     })
